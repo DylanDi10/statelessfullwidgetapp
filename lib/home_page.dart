@@ -25,33 +25,3 @@ class _MiWidgetStatefullState extends State<MiWidgetStatefull> {
     );
   }
 }
-
-class MiWidgetEstatico extends StatelessWidget {
-  String textoMostrar="Hola! Soy un Stateless Widget";
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Aplicativo de estados'),
-      ),
-      body:Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [ 
-            Text(
-            'Hola! Soy un Stateless Widget',
-            style: TextStyle(fontSize: 30)
-            ),
-            ElevatedButton(
-              onPressed: (){
-                textoMostrar="Hola como estas";
-                print(textoMostrar);},
-            child: Text("Cambiar el valor de la variable a hola como estas")
-            )
-          ]
-        ),
-      ),
-    );
-  }
-}
